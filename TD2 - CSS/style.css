@@ -65,3 +65,37 @@ Il est de taille 16px */
 #contenu p {
 	font-size: 16px;
 }
+
+#menu img {
+	border: solid 1px black;
+	border-radius: 10px;
+	box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+#menu ul.menuGauche {
+	margin: 5px;
+	padding: 10px ;
+	list-style-type: none;
+}
+
+#menu ul.menuGauche li {
+	background-color: cyan;
+	margin: 5px;
+	padding: 10px ;
+	border: solid 1px black;
+	text-align: center;
+	border-radius: 4px;
+	box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+}       
+
+#menu ul.menuGauche li a:link, #menu ul.menuGauche li a:visited   {
+	color: black;
+	background-color: lightblue;
+	text-decoration: none;
+	display: block;
+}
+
+#menu ul.menuGauche li a:hover {
+	color: rgb(20, 20, 20);
+	background-color: cyan;
+}
