@@ -1,0 +1,67 @@
+body {
+	margin: 0;
+}
+
+/* Elle doit être fixe dans le corps principal: elle est donc positionnée grâce à la propriété position:fixed
+elle est de largeur 180px, a une marge intérieure de 20px et une marge extérieure de 5px.
+Elle est de couleur de fond : R=CC, V=CC, B=FF */
+#menu {
+	position: fixed;
+	width: 180px;
+	padding: 20px;
+	margin: 5px;
+	background-color: #ccccff;
+}
+
+/* La balise <div> d'identificateur contenu :
+Elle est mise en position flottante à gauche
+Elle a une marge intérieure de 20px et une marge extérieure (haut, bas et droite) de 5px et une marge extérieure gauche de 230px
+Elle est de couleur de fond R=E0, V=E9, B=EE
+Elle est entourée d'un trait fin solide de couleur R=40, V=33, B=10 */
+#contenu {
+	float: left;
+	padding: 20px;
+	margin: 5px;
+	margin-left: 230px;
+	background-color: #e0e9ee;
+	border: solid 1px #403310;
+}
+
+/* La balise <footer> :
+Elle a une marge intérieure et extérieure de 20px
+Le texte est centré de couleur R=52, V=52, B=58
+Elle a la propriété clear:both lui permettant de se positionner en dessous de tous les élements précédents
+Elle est de couleur de fond R=DD, V=DD, B=DD */
+footer {
+	padding: 20px;
+	margin: 20px;
+	text-align: center;
+	clear: both;
+	background-color: #dddddd;
+}
+
+/* Pour le titre de niveau 1 inclus dans le DIV d'identificateur contenu :
+Il est centré de couleur R=00, V=33, B=99 et de taille 40px avec un fond de couleur R=59, V=FF, B=59
+Il est de largeur 100%, de hauteur 60px et de marge interieure haute de 20 px */
+#contenu h1 {
+	text-align: center;
+	color: #003399;
+	font-size: 40px;
+	background-color: 59ff59;
+	width: 100%;
+	height: 60px;
+	padding-top: 20px;
+}
+
+/* Pour le titre de niveau 3 inclus dans le DIV d'identificateur contenu
+Il est en gras de taille 24px */
+#contenu h3 {
+	font-weight: bold;
+	font-size: 24px;
+}
+
+/* Pour le paragraphe inclus dans le DIV d'identificateur contenu
+Il est de taille 16px */
+#contenu p {
+	font-size: 16px;
+}
