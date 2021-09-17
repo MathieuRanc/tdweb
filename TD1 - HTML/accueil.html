@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="iso-8859-1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Petites Annonces - hxxxxx</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <img class="annonces" src="images/petites-annonces.jpg" alt="Petites annonces">
+  <table>
+    <tr>
+      <td>
+        <h1>Mathieu Ranc</h1>
+        <a href="https://www.isen-lille.fr/" target="_blank">ISEN</a>
+      </td>
+      <td><img class="pdp" src="images/h99999.jpg" alt="Mathieu Ranc"></td>
+    </tr>
+
+  </table>
+  <p class="welcome">
+    Bienvenue sur le site de petites annonces.<br>
+    Ce site vous propose de :
+  </p>
+  <ul>
+    <li>Consulter les annonces</li>
+    <li>Publier une annonce</li>
+    <li>Gérer vos annonces</li>
+    <li>...</li>
+  </ul>
+  <hr>
+  <p class="pied">Page créée le : 17/09/2021 - <a href="mailto:contact@mathieuranc.fr">contact@mathieuranc.fr</a></p>
+</body>
+
+</html>
+
+<style>
+  html {
+    min-height: 100vh;
+    background-image: url('images/Fond_HEI.jpg');
+    background-position: bottom -50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+
+  table {
+    margin: 20px auto;
+  }
+
+  h1 {
+    margin: 0;
+    margin-right: 100px;
+    font-family: Helvetica;
+    font-size: 3em;
+    font-weight: normal;
+  }
+
+  .annonces {
+    width: 200px;
+    align-self: flex-end;
+  }
+
+  .welcome {
+    font-size: 1.2em;
+  }
+
+  .pdp {
+    width: 150px;
+  }
+
+  hr {
+    width: 75%;
+  }
+
+  .pied {
+    margin: 0 auto;
+  }
+</style>
