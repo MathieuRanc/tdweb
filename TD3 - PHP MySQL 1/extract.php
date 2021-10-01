@@ -1,30 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
 
-<?php
-$db_host = 'localhost';
-$db_user = 'root';
-$db_password = 'root';
-$db_db = 'td-web';
-$db_port = 8889;
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
 
-$mysqli = new mysqli(
-  $db_host,
-  $db_user,
-  $db_password,
-  $db_db
-);
+<body>
+  <table>
+    <?php
+    $servername = "mathieuranc.fr";
+    $username = "cpzl6748_tdweb";
+    $password = "SuperMotDePasse123";
+    $database = "cpzl6748_tdweb";
 
-if ($mysqli->connect_error) {
-  echo 'Errno: ' . $mysqli->connect_errno;
-  echo '<br>';
-  echo 'Error: ' . $mysqli->connect_error;
-  exit();
-}
+    // Create connection
+    $mysqli = new mysqli($servername, $username, $password, $database);
+    $mysqli->set_charset("utf8mb4");
 
-echo 'Success: A proper connection to MySQL was made.';
-echo '<br>';
-echo 'Host information: ' . $mysqli->host_info;
-echo '<br>';
-echo 'Protocol version: ' . $mysqli->protocol_version;
+    // Check connection
+    if ($mysqli->connect_error) {
+      die("Connection failed: " . $conn->connect_error);
+    }
 
-$mysqli->close();
-    //     $sql="SELECT titres FROM annonces";
+    if ($result = $mysqli->query("SELECT titre FROM annonces")) {
+      while ($row = $result->fetch_assoc()) {
+        echo '<tr><td>' . $row['titre'] . '</td></tr>';
+      }
+
+      /* Libération du jeu de résultats */
+      $result->close();
+    }
+    ?>
+  </table>
+</body>
+
+</html>
