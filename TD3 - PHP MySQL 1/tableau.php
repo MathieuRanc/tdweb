@@ -20,10 +20,10 @@
     </thead>
     <tbody>
       <?php
-      $servername = "mathieuranc.fr";
-      $username = "cpzl6748_tdweb";
-      $password = "SuperMotDePasse123";
-      $database = "cpzl6748_tdweb";
+      $servername = "localhost:3306";
+      $username = "root";
+      $password = "root";
+      $database = "td-web";
 
       // Create connection
       $mysqli = new mysqli($servername, $username, $password, $database);
@@ -31,7 +31,7 @@
 
       // Check connection
       if ($mysqli->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
+        die("Connection failed: " . $mysqli->connect_error);
       }
 
       if ($result = $mysqli->query("SELECT categorie,date,titre,texte,visible FROM annonces JOIN categories ON annonces.IDCategorie=categories.IDcategorie")) {
