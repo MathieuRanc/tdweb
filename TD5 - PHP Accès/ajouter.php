@@ -49,7 +49,7 @@
 						die("Connection failed: " . $mysqli->connect_error);
 					}
 
-					if ($result = $mysqli->query("SELECT categorie,IDCategorie FROM categories",)) {
+					if ($result = $mysqli->query("SELECT categorie,IDCategorie FROM categories")) {
 						while ($row = $result->fetch_assoc()) {
 							echo '<option value="' . $row['IDCategorie'] . '">' . $row['categorie'] . '</option>';
 						}
