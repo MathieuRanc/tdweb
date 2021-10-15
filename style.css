@@ -165,3 +165,7 @@ table.delete th {
 table.delete td {
 	min-width: auto;
 }
+
+img {
+	object-fit: contain;
+}
