@@ -25,7 +25,6 @@
         <!-- ******************************************************* -->
 
         <div id="contenu">
-
             <h1>Authentification</h1>
 
             <form action="authentification.php" method="post">
@@ -35,8 +34,6 @@
                 <input type="password" name="password" id="password" required>
                 <input type="submit" value="Valider" required>
             </form>
-
-
         </div> <!-- fin contenu -->
     </div>
 

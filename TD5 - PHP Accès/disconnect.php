@@ -1,7 +1,9 @@
 <?php
+session_start();
+
 unset($_SESSION["auth"]);
 unset($_SESSION["nom"]);
 
-$_SESSION["auth"] = 0;
+session_destroy();
 
 header("location:formulaire.php");

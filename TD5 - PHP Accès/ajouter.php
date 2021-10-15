@@ -16,6 +16,7 @@
 
 	<div id="page">
 		<?php
+		session_start();
 		if (!isset($_SESSION["auth"]) || $_SESSION["auth"] == 0) {
 			header("location:formulaire.php");
 		}
