@@ -5,7 +5,7 @@
 <head>
 	<title>Petites annonces - hxxxxx</title>
 	<meta charset="utf-8" />
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="../style.css">
 </head>
 
 <body>
@@ -15,21 +15,13 @@
 	<!-- ******************************************************* -->
 
 	<div id="page">
-		<div id="menu">
-
-			<img src="../assets/images/h99999.jpg" /><br />
-			<p>Pr&eacute;nom NOM</p>
-			<p>13 rue de toul<br />59000 LILLE<br />03.28.38.48.58<br />
-				<a href="mailto:xxxxxx@hei.yncrea.fr">xxx@hei.yncrea.fr</a>
-			</p>
-
-			<ul class="menuGauche">
-				<li><a href="consulter.html">Consulter</a></li>
-				<li><a href="ajouter.php">Ajouter</a></li>
-				<li><a href="supprimer.php">Supprimer</a></li>
-			</ul>
-
-		</div> <!-- fin menu -->
+		<?php
+		if (!isset($_SESSION["auth"]) || $_SESSION["auth"] == 0) {
+			header("location:formulaire.php");
+		}
+		include_once('outils.php');
+		afficheMenu();
+		?>
 
 		<!-- ******************************************************* -->
 		<!--                 CONTENU                                 -->
@@ -111,12 +103,10 @@
 	<!--                 PIED DE PAGE                            -->
 	<!-- ******************************************************* -->
 
-	<footer>
+	<?php
+	afficheFooter();
+	?>
 
-		<hr width="80%" />
-		<p>HEI - Mise &agrave; jour : 11/10/2016</p>
-
-	</footer> <!-- fin du pied de page -->
 
 </body>
 

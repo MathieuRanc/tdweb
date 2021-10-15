@@ -5,7 +5,7 @@
 <head>
   <title>Petites annonces - hxxxxx</title>
   <meta charset="utf-8" />
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../style.css">
 </head>
 
 <body>
@@ -14,29 +14,20 @@
   <!--                 MENU                                    -->
   <!-- ******************************************************* -->
 
-	<div id="page">
-    <div id="menu">
+  <div id="page">
 
-      <img src="../assets/images/h99999.jpg" /><br />
-      <p>Pr&eacute;nom NOM</p>
-      <p>13 rue de toul<br />59000 LILLE<br />03.28.38.48.58<br />
-        <a href="mailto:xxxxxx@hei.yncrea.fr">xxx@hei.yncrea.fr</a>
-      </p>
-
-      <ul class="menuGauche">
-        <li><a href="consulter.html">Consulter</a></li>
-        <li><a href="ajouter.php">Ajouter</a></li>
-        <li><a href="supprimer.php">Supprimer</a></li>
-      </ul>
-
-    </div> <!-- fin menu -->
-
+    <?php
+    if (!isset($_SESSION["auth"]) || $_SESSION["auth"] == 0) {
+      header("location:formulaire.php");
+    }
+    include_once('outils.php');
+    afficheMenu();
+    ?>
     <!-- ******************************************************* -->
     <!--                 CONTENU                                 -->
     <!-- ******************************************************* -->
 
     <div id="contenu">
-
       <h1>Consulter</h1>
 
       <form action="liste_annonces.php" method="get">
@@ -64,11 +55,8 @@
           <input type="radio" name="choix" id="Autre" value="Autre" required>
           <label for="Autre">Autre</label>
         </div>
-
         <input type="submit" value="Valider" required>
       </form>
-
-
     </div> <!-- fin contenu -->
   </div>
 
@@ -77,12 +65,10 @@
   <!--                 PIED DE PAGE                            -->
   <!-- ******************************************************* -->
 
-  <footer>
-
-    <hr width="80%" />
-    <p>HEI - Mise &agrave; jour : 11/10/2016</p>
-
-  </footer> <!-- fin du pied de page -->
+  <?php
+  include_once('outils.php');
+  afficheFooter();
+  ?>
 
 
 </body>
